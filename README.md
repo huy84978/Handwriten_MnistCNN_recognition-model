@@ -77,7 +77,9 @@ o	Sau khi huấn luyện, mô hình được đánh giá trên tập kiểm tra 
 
 
 tuy nhiên với cách xây dụng cơ bản như vậy thi mô hình có khả năng gặp phải một sô tình trạng lỗi ở đây có thể nói tói như hình dưới
+
 ![tình trạng lỗi của mô hình ban đầu](mnistmodel2.png)
+
 giải thích:
 1.	Accuracy over Epochs (Biểu đồ bên trái):
 o	Độ chính xác trên tập huấn luyện (Training Accuracy) tăng dần và đạt gần 100%, cho thấy mô hình học tốt trên dữ liệu huấn luyện.
