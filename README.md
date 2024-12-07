@@ -193,7 +193,7 @@ o	Mô hình được huấn luyện trong tối đa 40 epoch, với dữ liệu 
 
 o	Mô hình đạt được hiệu suất tốt và được lưu lại dưới tên updateMnistCNN.keras.
 
-Tóm tắt ưu điểm so với mô hình ban đầu:
+#### Tóm tắt ưu điểm so với mô hình ban đầu:
 
 •	Mô hình kết hợp Data Augmentation, Dropout, và Batch Normalization để cải thiện độ chính xác và giảm overfitting.
 
