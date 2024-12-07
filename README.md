@@ -104,3 +104,55 @@ sau khi cải thiện ta được mô hình thứ 2 đã cải thiện được 
 
 ![mô hình ban đầu](opmnistmodel2.png)
 
+Mô hình “OptimizationMnistCNN” là một phiên bản cải tiến của mạng nơ-ron tích chập (CNN) để nhận diện chữ viết tay từ tập dữ liệu MNIST. So với mô hình cũ mô hình này mạnh mẽ với các kỹ thuật nâng cao nhằm cải thiện hiệu năng và giảm overfitting. Dưới đây là khái quát về mô hình:
+
+1.	Dữ liệu đầu vào:
+
+o	Tập dữ liệu MNIST (chữ số viết tay) gồm các ảnh 28x28, được chuẩn hóa về khoảng [0, 1].
+
+o	Sử dụng kỹ thuật Data Augmentation để tăng tính đa dạng của dữ liệu huấn luyện, bao gồm xoay, dịch chuyển, và zoom ảnh.
+
+2.	Cấu trúc mô hình:
+
+o	Lớp tích chập (Conv2D):
+
+	3 lớp tích chập với số lượng bộ lọc tăng dần (64, 128, 256).
+
+	Kích thước kernel là (3, 3) và hàm kích hoạt ReLU.
+
+o	Batch Normalization: Được thêm sau mỗi lớp tích chập để tăng tốc độ huấn luyện và cải thiện độ ổn định.
+
+o	MaxPooling2D: Giảm kích thước không gian của đặc trưng bằng cách lấy giá trị cực đại trong mỗi vùng pooling (2x2).
+
+o	Dropout: Được sử dụng ở mức 0.25 và 0.5 để giảm overfitting.
+
+o	Flatten và Dense:
+
+	Lớp Flatten chuyển tensor thành vector để kết nối với các lớp fully connected.
+
+	Một lớp Dense 256 nút với ReLU, và lớp đầu ra với 10 nút (softmax) tương ứng với 10 chữ số.
+
+3.	Kỹ thuật tối ưu:
+
+o	Optimizer: Sử dụng Adam để tối ưu hóa với tốc độ hội tụ nhanh.
+
+o	Loss Function: sparse_categorical_crossentropy phù hợp cho bài toán phân loại nhiều lớp.
+
+o	EarlyStopping: Theo dõi val_loss và dừng huấn luyện sớm nếu không cải thiện trong 15 epoch, tránh lãng phí tài nguyên.
+
+4.	Huấn luyện và đánh giá:
+
+o	Dữ liệu được huấn luyện qua ImageDataGenerator để áp dụng augmentation trong thời gian thực.
+
+o	Mô hình được huấn luyện trong tối đa 40 epoch, với dữ liệu kiểm tra (validation) để đánh giá khả năng tổng quát hóa.
+
+o	Mô hình đạt được hiệu suất tốt và được lưu lại dưới tên updateMnistCNN.keras.
+
+Tóm tắt ưu điểm so với mô hình ban đầu:
+
+•	Mô hình kết hợp Data Augmentation, Dropout, và Batch Normalization để cải thiện độ chính xác và giảm overfitting.
+
+•	EarlyStopping giúp tối ưu hóa thời gian huấn luyện và lựa chọn mô hình tốt nhất.
+
+•	Sử dụng cấu trúc CNN đa tầng, mạnh mẽ và phù hợp cho dữ liệu hình ảnh.
+
