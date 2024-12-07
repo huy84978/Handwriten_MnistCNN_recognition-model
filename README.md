@@ -109,7 +109,7 @@ o	Sau khi huấn luyện, mô hình được đánh giá trên tập kiểm tra 
 
 	Accuracy (Độ chính xác).
 
-5. Kết quả cuối cùng
+**5**. Kết quả cuối cùng
 
 •	Lưu mô hình: Mô hình sau khi huấn luyện được lưu dưới tên file MnistCNN.keras để sử dụng trong tương lai.
 
@@ -126,37 +126,38 @@ tuy nhiên với cách xây dụng cơ bản như vậy thi mô hình có khả 
 
 ### giải thích:
 
-1.	Accuracy over Epochs (Biểu đồ bên trái):
+**1**.	Accuracy over Epochs (Biểu đồ bên trái):
 
 o	Độ chính xác trên tập huấn luyện (Training Accuracy) tăng dần và đạt gần 100%, cho thấy mô hình học tốt trên dữ liệu huấn luyện.
 
 o	Độ chính xác trên tập kiểm tra (Validation Accuracy) ổn định quanh mức 99%, nhưng không tăng thêm nhiều sau một số epoch đầu. Điều này cho thấy mô hình có khả năng tổng quát hóa tốt nhưng có thể đã đạt giới hạn về độ chính xác.
 
 
-2.	Loss over Epochs (Biểu đồ bên phải):
+**2**.	Loss over Epochs (Biểu đồ bên phải):
 
 o	Hàm mất mát trên tập huấn luyện (Training Loss) giảm đều và duy trì ở mức thấp, cho thấy mô hình tối ưu tốt trên dữ liệu huấn luyện.
 
 o	Hàm mất mát trên tập kiểm tra (Validation Loss) giảm ban đầu nhưng tăng dần sau khoảng 10 epoch, biểu hiện của hiện tượng overfitting (mô hình học quá mức dữ liệu huấn luyện).
 
 
-Nhận xét:
+**Nhận xét**:
 
 •	Mô hình hoạt động tốt với độ chính xác cao, nhưng có dấu hiệu overfitting, vì Validation Loss tăng trong khi Validation Accuracy không cải thiện.
 
 sau khi cải thiện ta được mô hình thứ 2 đã cải thiện được tình trạng overfitting trên.
 
+**Hình 4:** đánh giắ so sánh 2 mô hình trước sau cải thiện
 ![đánh giắ so sánh 2 mô hình trước sau cải thiện](opmnistmodel2.png)
 
 Mô hình “OptimizationMnistCNN” là một phiên bản cải tiến của mạng nơ-ron tích chập (CNN) để nhận diện chữ viết tay từ tập dữ liệu MNIST. So với mô hình cũ mô hình này mạnh mẽ với các kỹ thuật nâng cao nhằm cải thiện hiệu năng và giảm overfitting. Dưới đây là khái quát về mô hình:
 
-1.	Dữ liệu đầu vào:
+**1**.	Dữ liệu đầu vào:
 
 o	Tập dữ liệu MNIST (chữ số viết tay) gồm các ảnh 28x28, được chuẩn hóa về khoảng [0, 1].
 
 o	Sử dụng kỹ thuật Data Augmentation để tăng tính đa dạng của dữ liệu huấn luyện, bao gồm xoay, dịch chuyển, và zoom ảnh.
 
-2.	Cấu trúc mô hình:
+**2**.	Cấu trúc mô hình:
 
 o	Lớp tích chập (Conv2D):
 
@@ -176,7 +177,7 @@ o	Flatten và Dense:
 
 	Một lớp Dense 256 nút với ReLU, và lớp đầu ra với 10 nút (softmax) tương ứng với 10 chữ số.
 
-3.	Kỹ thuật tối ưu:
+**3**.	Kỹ thuật tối ưu:
 
 o	Optimizer: Sử dụng Adam để tối ưu hóa với tốc độ hội tụ nhanh.
 
@@ -184,7 +185,7 @@ o	Loss Function: sparse_categorical_crossentropy phù hợp cho bài toán phân
 
 o	EarlyStopping: Theo dõi val_loss và dừng huấn luyện sớm nếu không cải thiện trong 15 epoch, tránh lãng phí tài nguyên.
 
-4.	Huấn luyện và đánh giá:
+**4**.	Huấn luyện và đánh giá:
 
 o	Dữ liệu được huấn luyện qua ImageDataGenerator để áp dụng augmentation trong thời gian thực.
 
