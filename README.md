@@ -81,8 +81,11 @@ tuy nhiên với cách xây dụng cơ bản như vậy thi mô hình có khả 
 ![tình trạng lỗi của mô hình ban đầu](mnistmodel2.png)
 
 giải thích:
+
 1.	Accuracy over Epochs (Biểu đồ bên trái):
+
 o	Độ chính xác trên tập huấn luyện (Training Accuracy) tăng dần và đạt gần 100%, cho thấy mô hình học tốt trên dữ liệu huấn luyện.
+
 o	Độ chính xác trên tập kiểm tra (Validation Accuracy) ổn định quanh mức 99%, nhưng không tăng thêm nhiều sau một số epoch đầu. Điều này cho thấy mô hình có khả năng tổng quát hóa tốt nhưng có thể đã đạt giới hạn về độ chính xác.
 
 
