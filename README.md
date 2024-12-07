@@ -74,6 +74,8 @@ o	Sau khi huấn luyện, mô hình được đánh giá trên tập kiểm tra 
 •	Độ chính xác: Được in ra sau khi đánh giá trên tập kiểm tra (test_images và test_labels).
 
 ![mô hình ban đầu](mnistmodel1.png)
+
+
 tuy nhiên với cách sây dụng cơ bản như vậy thi mô hình có khả năng gặp phải một sô tình trạng lỗi ở đây có thể nói tói như hình dưới
 ![tình trạng lỗi của mô hình ban đầu](mnistmodel2.png)
 giải thích:
