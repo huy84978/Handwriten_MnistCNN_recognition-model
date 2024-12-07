@@ -227,3 +227,14 @@ Hàm mất mát trên tập kiểm tra giảm đều và ổn định, không t�
 •	Mô hình cũ có dấu hiệu overfitting khi độ chính xác của tập huấn luyện tăng mạnh nhưng độ chính xác của tập kiểm tra không cải thiện và hàm mất mát của tập kiểm tra bắt đầu tăng.
 
 •	Mô hình mới được tối ưu hóa tốt hơn, giảm được overfitting và cải thiện độ chính xác trên tập kiểm tra, cho thấy sự cải tiến rõ rệt trong quá trình huấn luyện.
+
+# Tổng kết bài học.
+Qua bài học này, chúng ta đã học được cách xây dựng và cải thiện một mô hình nhận diện chữ số viết tay bằng mạng nơ-ron tích chập (CNN) sử dụng bộ dữ liệu MNIST. Bài học này không chỉ giúp hiểu rõ về kiến trúc của CNN mà còn giúp áp dụng các kỹ thuật tối ưu hóa để nâng cao hiệu suất của mô hình trong các bài toán phân loại hình ảnh.
+
+Đầu tiên, mô hình cơ bản với một số lớp tích chập và lớp kết nối đầy đủ (fully connected) đã giúp mô hình nhận diện chữ số viết tay khá hiệu quả. Tuy nhiên, mô hình này gặp phải vấn đề overfitting khi độ chính xác trên tập huấn luyện tăng mạnh, trong khi đó độ chính xác trên tập kiểm tra không cải thiện nhiều và hàm mất mát trên tập kiểm tra bắt đầu tăng lên.
+
+Tiếp theo, chúng ta đã cải thiện mô hình bằng cách sử dụng các kỹ thuật như Data Augmentation, Batch Normalization, Dropout, và EarlyStopping. Những cải tiến này đã giúp mô hình giảm được overfitting, duy trì độ chính xác ổn định trên cả tập huấn luyện và tập kiểm tra, đồng thời giảm hàm mất mát trên tập kiểm tra. Mô hình cải tiến cũng cho thấy hiệu suất cao hơn và có khả năng tổng quát tốt hơn khi đối mặt với dữ liệu chưa thấy.
+
+Qua đó, bài học giúp chúng ta nhận thức rõ ràng hơn về những thách thức khi xây dựng và huấn luyện mô hình học sâu, cũng như các kỹ thuật có thể áp dụng để tối ưu hóa và cải thiện mô hình. Điều này không chỉ có giá trị trong việc phát triển các mô hình nhận diện chữ viết tay, mà còn có thể được áp dụng cho các bài toán học sâu khác, đặc biệt là trong lĩnh vực xử lý hình ảnh.
+
+Cuối cùng, bài học này còn giúp củng cố khả năng vận dụng thư viện TensorFlow, Keras, và các công cụ khác như NumPy, Tkinter để xây dựng các ứng dụng học máy và trí tuệ nhân tạo thực tế.
