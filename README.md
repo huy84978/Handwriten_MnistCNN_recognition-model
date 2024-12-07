@@ -43,43 +43,76 @@ Hình ảnh là các chữ số viết tay từ bộ dữ liệu MNIST, với m�
 - **Hàng 10:** Chữ số 9, có nét trên tròn và nét dưới thẳng hoặc cong.
 
 # Mô tả khái quát về mô hình “MnistCNN” mô hình cơ bản ban đầu
-**1**. Tổng quan về nhiệm vụ
+### 1. Tổng quan về nhiệm vụ
 Mô hình này được xây dựng để nhận diện chữ số viết tay từ tập dữ liệu MNIST. Đây là một bài toán phân loại, trong đó mỗi ảnh chữ số viết tay (28x28 pixel) được phân loại thành một trong 10 lớp tương ứng với các chữ số từ 0 đến 9.
-**2**. Xử lý dữ liệu
+### 2. Xử lý dữ liệu
 •	Dữ liệu đầu vào:
+
 o	Ảnh chữ số: Mỗi ảnh có kích thước 28x28 pixel, được chuẩn hóa về giá trị từ [0, 255] thành [0.0, 1.0] để tăng hiệu quả huấn luyện.
+
 o	Nhãn chữ số: Tập nhãn dạng số nguyên từ 0 đến 9, dùng để xác định đúng chữ số của mỗi ảnh.
+
 •	Tệp dữ liệu:
+
 o	Ảnh và nhãn được tải từ các tệp .gz và xử lý thành các mảng NumPy.
-**3**. Kiến trúc của mô hình CNN
+
+### 3. Kiến trúc của mô hình CNN
 Mô hình được thiết kế dựa trên mạng nơ-ron tích chập (Convolutional Neural Network - CNN) với các thành phần chính như sau:
+
 **1**.	Input Layer:
+
 o	Kích thước đầu vào: (28, 28, 1) (ảnh xám có 1 kênh màu).
-2.	Convolutional Layers (Tích chập):
+
+**2**.	Convolutional Layers (Tích chập):
+
 o	Lớp tích chập 1: 32 bộ lọc kích thước (3x3), hàm kích hoạt ReLU.
+
 o	Lớp pooling 1: Giảm kích thước với max pooling kích thước (2x2).
+
 o	Lớp tích chập 2: 64 bộ lọc kích thước (3x3), hàm kích hoạt ReLU.
+
 o	Lớp pooling 2: Max pooling (2x2).
-3.	Flatten Layer (Phẳng hóa):
+
+**3**.	Flatten Layer (Phẳng hóa):
+
 o	Chuyển tensor 2D thành vector 1D để kết nối với lớp fully connected.
-4.	Dense Layers (Kết nối đầy đủ):
+
+**4**.	Dense Layers (Kết nối đầy đủ):
+
 o	Lớp ẩn: 128 nơ-ron với hàm kích hoạt ReLU.
+
 o	Lớp đầu ra: 10 nơ-ron, mỗi nơ-ron tương ứng với một lớp chữ số, sử dụng hàm kích hoạt softmax để dự đoán xác suất.
-4. Huấn luyện và đánh giá
+
+**4**. Huấn luyện và đánh giá
+
 •	Biên dịch mô hình:
+
 o	Hàm mất mát: sparse_categorical_crossentropy (phù hợp cho bài toán phân loại đa lớp).
+
 o	Tối ưu hóa: adam (tăng tốc hội tụ và hiệu quả tối ưu hóa).
+
 o	Đánh giá: Sử dụng độ chính xác (accuracy).
+
 •	Huấn luyện mô hình:
+
 o	Số epoch: 20.
+
 o	Dữ liệu huấn luyện: Tập train_images và train_labels.
+
 o	Dữ liệu kiểm tra: Tập test_images và test_labels.
+
 •	Đánh giá mô hình:
+
 o	Sau khi huấn luyện, mô hình được đánh giá trên tập kiểm tra để tính toán:
+
 	Loss (Hàm mất mát).
+
 	Accuracy (Độ chính xác).
+
 5. Kết quả cuối cùng
+
 •	Lưu mô hình: Mô hình sau khi huấn luyện được lưu dưới tên file MnistCNN.keras để sử dụng trong tương lai.
+
 •	Độ chính xác: Được in ra sau khi đánh giá trên tập kiểm tra (test_images và test_labels).
 
 **Hình 2:** mô tả mô hình ban đầu
@@ -91,7 +124,7 @@ tuy nhiên với cách xây dụng cơ bản như vậy thi mô hình có khả 
 **Hình 3:** đánh giá mô hình ban đầu
 ![tình trạng lỗi của mô hình ban đầu](mnistmodel2.png)
 
-giải thích:
+### giải thích:
 
 1.	Accuracy over Epochs (Biểu đồ bên trái):
 
@@ -113,7 +146,7 @@ Nhận xét:
 
 sau khi cải thiện ta được mô hình thứ 2 đã cải thiện được tình trạng overfitting trên.
 
-![mô hình ban đầu](opmnistmodel2.png)
+![đánh giắ so sánh 2 mô hình trước sau cải thiện](opmnistmodel2.png)
 
 Mô hình “OptimizationMnistCNN” là một phiên bản cải tiến của mạng nơ-ron tích chập (CNN) để nhận diện chữ viết tay từ tập dữ liệu MNIST. So với mô hình cũ mô hình này mạnh mẽ với các kỹ thuật nâng cao nhằm cải thiện hiệu năng và giảm overfitting. Dưới đây là khái quát về mô hình:
 
