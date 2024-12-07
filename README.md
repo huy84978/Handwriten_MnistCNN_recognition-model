@@ -56,7 +56,7 @@ o	Nhãn chữ số: Tập nhãn dạng số nguyên từ 0 đến 9, dùng để
 
 o	Ảnh và nhãn được tải từ các tệp .gz và xử lý thành các mảng NumPy.
 
-### 3. Kiến trúc của mô hình CNN
+### 3. Kiến trúc của mô hình MnistCNN
 Mô hình được thiết kế dựa trên mạng nơ-ron tích chập (Convolutional Neural Network - CNN) với các thành phần chính như sau:
 
 **1**.	Input Layer:
@@ -150,6 +150,8 @@ sau khi cải thiện ta được mô hình thứ 2 đã cải thiện được 
 
 **Hình 4:** so sánh 2 mô hình trước sau cải thiện
 ![so sánh 2 mô hình trước sau cải thiện](sosanh2model.png)
+
+### 3. Kiến trúc của mô hình MnistCNN
 
 Mô hình “OptimizationMnistCNN” là một phiên bản cải tiến của mạng nơ-ron tích chập (CNN) để nhận diện chữ viết tay từ tập dữ liệu MNIST. So với mô hình cũ mô hình này mạnh mẽ với các kỹ thuật nâng cao nhằm cải thiện hiệu năng và giảm overfitting. Dưới đây là khái quát về mô hình:
 
