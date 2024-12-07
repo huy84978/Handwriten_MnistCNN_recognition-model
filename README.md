@@ -16,7 +16,7 @@ Trong nhận dạng chữ viết tay, MNIST đóng vai trò là bộ dữ liệu
 Bộ dữ liệu MNIST chứa hình ảnh thang độ xám của chữ số viết tay, cung cấp một bộ dữ liệu có cấu trúc tốt cho các tác vụ phân loại hình ảnh. Dưới đây là một ví dụ về hình ảnh từ bộ dữ liệu:
 
 **Hình 1:** Các mẫu chữ số viết tay từ tập dữ liệu MNIST.  
-![Các mẫu chữ số viết tay từ tập dữ liệu MNIST](images/mnist_samples.png)
+![Các mẫu chữ số viết tay từ tập dữ liệu MNIST](mnist_samples.png)
 
 ### Mô tả hình ảnh:
 Hình ảnh là các chữ số viết tay từ bộ dữ liệu MNIST, với mỗi ô vuông đại diện cho một mẫu chữ số. Có tổng cộng 10 hàng, mỗi hàng tương ứng với một chữ số từ 0 đến 9. Mỗi chữ số được viết theo nhiều cách khác nhau, thể hiện sự đa dạng về kiểu dáng, độ nghiêng, và nét viết tay.
