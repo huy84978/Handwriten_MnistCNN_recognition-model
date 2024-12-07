@@ -126,14 +126,14 @@ tuy nhiên với cách xây dụng cơ bản như vậy thi mô hình có khả 
 
 ### giải thích:
 
-**1**.	Accuracy over Epochs (Biểu đồ bên trái):
+**Accuracy over Epochs (Biểu đồ bên trái):**
 
 o	Độ chính xác trên tập huấn luyện (Training Accuracy) tăng dần và đạt gần 100%, cho thấy mô hình học tốt trên dữ liệu huấn luyện.
 
 o	Độ chính xác trên tập kiểm tra (Validation Accuracy) ổn định quanh mức 99%, nhưng không tăng thêm nhiều sau một số epoch đầu. Điều này cho thấy mô hình có khả năng tổng quát hóa tốt nhưng có thể đã đạt giới hạn về độ chính xác.
 
 
-**2**.	Loss over Epochs (Biểu đồ bên phải):
+**Loss over Epochs (Biểu đồ bên phải):**
 
 o	Hàm mất mát trên tập huấn luyện (Training Loss) giảm đều và duy trì ở mức thấp, cho thấy mô hình tối ưu tốt trên dữ liệu huấn luyện.
 
@@ -203,3 +203,27 @@ o	Mô hình đạt được hiệu suất tốt và được lưu lại dưới 
 
 **Hình 5:** đánh giắ so sánh 2 mô hình trước sau cải thiện
 ![đánh giắ so sánh 2 mô hình trước sau cải thiện](opmnistmodel2.png)
+
+#### giải thích:
+
+**Mô hình cũ:**
+
+•	Accuracy over Epochs (Độ chính xác qua các Epochs):
+Độ chính xác của mô hình huấn luyện (Training Accuracy) đạt gần 100%, trong khi độ chính xác trên tập kiểm tra (Validation Accuracy) chỉ đạt khoảng 99%. Tuy nhiên, độ chính xác trên tập kiểm tra không cải thiện nhiều sau vài epoch đầu, cho thấy mô hình đã đạt giới hạn của nó.
+
+•	Loss over Epochs (Hàm mất mát qua các Epochs):
+Hàm mất mát trên tập huấn luyện (Training Loss) giảm xuống nhanh chóng và duy trì ở mức thấp, cho thấy mô hình đang học tốt trên dữ liệu huấn luyện. Tuy nhiên, hàm mất mát trên tập kiểm tra (Validation Loss) bắt đầu tăng sau khoảng 10 epoch, dấu hiệu của hiện tượng overfitting (mô hình học quá mức dữ liệu huấn luyện).
+
+**Mô hình mới:**
+
+•	Accuracy over Epochs:
+Độ chính xác trên tập huấn luyện và tập kiểm tra của mô hình mới đều đạt mức cao và duy trì ổn định. Đặc biệt, độ chính xác trên tập kiểm tra có sự cải thiện rõ rệt và ổn định, cho thấy mô hình đã khắc phục được vấn đề overfitting.
+
+•	Loss over Epochs:
+Hàm mất mát trên tập kiểm tra giảm đều và ổn định, không tăng lên như trong mô hình cũ, chứng tỏ mô hình mới hoạt động ổn định và không bị overfitting.
+
+**Tổng kết:**
+
+•	Mô hình cũ có dấu hiệu overfitting khi độ chính xác của tập huấn luyện tăng mạnh nhưng độ chính xác của tập kiểm tra không cải thiện và hàm mất mát của tập kiểm tra bắt đầu tăng.
+
+•	Mô hình mới được tối ưu hóa tốt hơn, giảm được overfitting và cải thiện độ chính xác trên tập kiểm tra, cho thấy sự cải tiến rõ rệt trong quá trình huấn luyện.
