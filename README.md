@@ -17,8 +17,11 @@ mô hình giúp cho người dùng nhận dạnh hình ảnh chữ số viết t
 # Lựa chọn bộ dữ liệu 
 Bộ dữ liệu được sử dụng trong đề tài là: MNIST 
 Bộ dữ liệu MNIST (Modified National Institute of Standards and Technology) là một tập dữ liệu chuẩn trong lĩnh vực trí tuệ nhân tạo, đặc biệt trong bài toán nhận dạng chữ số viết tay. MNIST bao gồm 70.000 hình ảnh chữ số viết tay từ 0 đến 9, trong đó có 60.000 hình ảnh dùng để huấn luyện và 10.000 hình ảnh để kiểm tra. Mỗi hình ảnh trong bộ dữ liệu có kích thước 28x28 pixel và là ảnh xám (grayscale), giúp giảm độ phức tạp của bài toán và tăng tính đồng nhất của dữ liệu . Đặc biệt, các chữ số trong MNIST được viết bởi nhiều người khác nhau, bao gồm cả trẻ em và người lớn, tạo nên sự đa dạng trong phong cách viết và độ phức tạp, làm cho nó trở thành một bộ dữ liệu lý tưởng để kiểm tra độ mạnh mẽ của các mô hình nhận diện.
+
 Trong nhận dạng chữ viết tay, MNIST đóng vai trò là bộ dữ liệu khởi điểm để phát triển và kiểm thử các thuật toán xử lý ảnh và học sâu . Bộ dữ liệu này thường được sử dụng để huấn luyện các mô hình Machine Learning hoặc Deep Learning, đặc biệt là mạng nơ-ron tích chập (Convolutional Neural Networks - CNN). Nhờ tính chuẩn hóa cao và dễ sử dụng, MNIST không chỉ giúp các nhà nghiên cứu kiểm chứng hiệu quả của mô hình mà còn hỗ trợ trong việc so sánh hiệu suất giữa các thuật toán . Ngoài ra, MNIST còn được dùng làm tài liệu học tập cho người mới bắt đầu nghiên cứu về trí tuệ nhân tạo, giúp họ hiểu rõ hơn về quy trình xử lý dữ liệu, huấn luyện mô hình và đánh giá kết quả.
+
 Ứng dụng thực tiễn của MNIST chủ yếu nằm trong việc xây dựng nền tảng cho các hệ thống nhận diện chữ viết tay, chẳng hạn như xử lý tài liệu hành chính, nhận diện séc hoặc hóa đơn trong ngân hàng, và số hóa văn bản viết tay . Bộ dữ liệu này không chỉ hỗ trợ việc phát triển các hệ thống nhỏ mà còn là bước khởi đầu cho các nghiên cứu mở rộng với dữ liệu lớn và phức tạp hơn, chẳng hạn như nhận diện chữ viết tay toàn phần hoặc các ký tự không phải tiếng Anh.
+
 Bộ dữ liệu MNIST chứa hình ảnh thang độ xám của chữ số viết tay, cung cấp một bộ dữ liệu có cấu trúc tốt cho các tác vụ phân loại hình ảnh. Dưới đây là một ví dụ về hình ảnh từ bộ dữ liệu:
 
 **Hình 1:** Các mẫu chữ số viết tay từ tập dữ liệu MNIST.  
@@ -39,7 +42,7 @@ Hình ảnh là các chữ số viết tay từ bộ dữ liệu MNIST, với m�
 - **Hàng 9:** Chữ số 8, hiển thị các dạng viết tay với hai vòng tròn đều nhau hoặc không đều.
 - **Hàng 10:** Chữ số 9, có nét trên tròn và nét dưới thẳng hoặc cong.
 
-###Mô tả khái quát về mô hình “MnistCNN” mô hình cơ bản ban đầu
+# Mô tả khái quát về mô hình “MnistCNN” mô hình cơ bản ban đầu
 **1**. Tổng quan về nhiệm vụ
 Mô hình này được xây dựng để nhận diện chữ số viết tay từ tập dữ liệu MNIST. Đây là một bài toán phân loại, trong đó mỗi ảnh chữ số viết tay (28x28 pixel) được phân loại thành một trong 10 lớp tương ứng với các chữ số từ 0 đến 9.
 **2**. Xử lý dữ liệu
