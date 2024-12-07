@@ -39,18 +39,18 @@ Hình ảnh là các chữ số viết tay từ bộ dữ liệu MNIST, với m�
 - **Hàng 9:** Chữ số 8, hiển thị các dạng viết tay với hai vòng tròn đều nhau hoặc không đều.
 - **Hàng 10:** Chữ số 9, có nét trên tròn và nét dưới thẳng hoặc cong.
 
-Mô tả khái quát về mô hình “MnistCNN” mô hình cơ bản ban đầu
-1. Tổng quan về nhiệm vụ
+###Mô tả khái quát về mô hình “MnistCNN” mô hình cơ bản ban đầu
+**1**. Tổng quan về nhiệm vụ
 Mô hình này được xây dựng để nhận diện chữ số viết tay từ tập dữ liệu MNIST. Đây là một bài toán phân loại, trong đó mỗi ảnh chữ số viết tay (28x28 pixel) được phân loại thành một trong 10 lớp tương ứng với các chữ số từ 0 đến 9.
-2. Xử lý dữ liệu
+**2**. Xử lý dữ liệu
 •	Dữ liệu đầu vào:
 o	Ảnh chữ số: Mỗi ảnh có kích thước 28x28 pixel, được chuẩn hóa về giá trị từ [0, 255] thành [0.0, 1.0] để tăng hiệu quả huấn luyện.
 o	Nhãn chữ số: Tập nhãn dạng số nguyên từ 0 đến 9, dùng để xác định đúng chữ số của mỗi ảnh.
 •	Tệp dữ liệu:
 o	Ảnh và nhãn được tải từ các tệp .gz và xử lý thành các mảng NumPy.
-3. Kiến trúc của mô hình CNN
+**3**. Kiến trúc của mô hình CNN
 Mô hình được thiết kế dựa trên mạng nơ-ron tích chập (Convolutional Neural Network - CNN) với các thành phần chính như sau:
-1.	Input Layer:
+**1**.	Input Layer:
 o	Kích thước đầu vào: (28, 28, 1) (ảnh xám có 1 kênh màu).
 2.	Convolutional Layers (Tích chập):
 o	Lớp tích chập 1: 32 bộ lọc kích thước (3x3), hàm kích hoạt ReLU.
@@ -79,12 +79,13 @@ o	Sau khi huấn luyện, mô hình được đánh giá trên tập kiểm tra 
 •	Lưu mô hình: Mô hình sau khi huấn luyện được lưu dưới tên file MnistCNN.keras để sử dụng trong tương lai.
 •	Độ chính xác: Được in ra sau khi đánh giá trên tập kiểm tra (test_images và test_labels).
 
-**Hình 2:** đánh giá mô hình ban đầu
+**Hình 2:** mô tả mô hình ban đầu
 ![mô hình ban đầu](mnistmodel1.png)
 
 
 tuy nhiên với cách xây dụng cơ bản như vậy thi mô hình có khả năng gặp phải một sô tình trạng lỗi ở đây có thể nói tói như hình dưới
 
+**Hình 3:** đánh giá mô hình ban đầu
 ![tình trạng lỗi của mô hình ban đầu](mnistmodel2.png)
 
 giải thích:
