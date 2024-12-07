@@ -27,10 +27,10 @@ Bộ dữ liệu MNIST chứa hình ảnh thang độ xám của chữ số vi�
 **Hình 1:** Các mẫu chữ số viết tay từ tập dữ liệu MNIST.  
 ![Các mẫu chữ số viết tay từ tập dữ liệu MNIST](mnist_samples.png)
 
-### Mô tả hình ảnh:
+**Mô tả hình ảnh:**
 Hình ảnh là các chữ số viết tay từ bộ dữ liệu MNIST, với mỗi ô vuông đại diện cho một mẫu chữ số. Có tổng cộng 10 hàng, mỗi hàng tương ứng với một chữ số từ 0 đến 9. Mỗi chữ số được viết theo nhiều cách khác nhau, thể hiện sự đa dạng về kiểu dáng, độ nghiêng, và nét viết tay.
 
-### Chú thích chi tiết:
+**Chú thích chi tiết:**
 - **Hàng 1:** Chữ số 0, hiển thị nhiều kiểu viết tay khác nhau, từ nét tròn đến nét góc cạnh.
 - **Hàng 2:** Chữ số 1, với các nét thẳng đứng, nghiêng hoặc hơi cong.
 - **Hàng 3:** Chữ số 2, thể hiện các cách viết từ nét mượt đến nét góc cạnh.
