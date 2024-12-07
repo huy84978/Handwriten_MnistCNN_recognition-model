@@ -102,3 +102,5 @@ Nhận xét:
 
 sau khi cải thiện ta được mô hình thứ 2 đã cải thiện được tình trạng overfitting trên.
 
+![mô hình ban đầu](opmnistmodel2.png)
+
