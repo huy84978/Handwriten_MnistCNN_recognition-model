@@ -91,5 +91,6 @@ o	Hàm mất mát trên tập kiểm tra (Validation Loss) giảm ban đầu nh�
 
 Nhận xét:
 •	Mô hình hoạt động tốt với độ chính xác cao, nhưng có dấu hiệu overfitting, vì Validation Loss tăng trong khi Validation Accuracy không cải thiện.
+
 •	Để cải thiện, có thể thử các phương pháp như giảm số lượng epoch, sử dụng regularization (Dropout, L2 Regularization), hoặc áp dụng kỹ thuật tăng cường dữ liệu (data augmentation) để làm đa dạng tập dữ liệu huấn luyện.
 
