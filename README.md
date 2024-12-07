@@ -1,4 +1,4 @@
-# Giới thiệu các công cụ sử dụng
+# Giới thiệu các công cụ sử dụng trong.
 
 Ngôn ngữ lập trình Python: Python là một ngôn ngữ lập trình cấp cao, đa năng và được biết đến với cú pháp đơn giản, dễ đọc, phù hợp cho cả người mới học lẫn các chuyên gia lập trình. Với khả năng hỗ trợ nhiều thư viện mạnh mẽ, Python trở thành lựa chọn hàng đầu trong lĩnh vực trí tuệ nhân tạo, học máy, xử lý dữ liệu, và phát triển ứng dụng.
 
