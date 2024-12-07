@@ -151,7 +151,7 @@ sau khi cải thiện ta được mô hình thứ 2 đã cải thiện được 
 **Hình 4:** so sánh 2 mô hình trước sau cải thiện
 ![so sánh 2 mô hình trước sau cải thiện](sosanh2model.png)
 
-### 3. Kiến trúc của mô hình MnistCNN
+### 1. Kiến trúc của mô hình OptimizationMnistCNN
 
 Mô hình “OptimizationMnistCNN” là một phiên bản cải tiến của mạng nơ-ron tích chập (CNN) để nhận diện chữ viết tay từ tập dữ liệu MNIST. So với mô hình cũ mô hình này mạnh mẽ với các kỹ thuật nâng cao nhằm cải thiện hiệu năng và giảm overfitting. Dưới đây là khái quát về mô hình:
 
@@ -197,7 +197,7 @@ o	Mô hình được huấn luyện trong tối đa 40 epoch, với dữ liệu 
 
 o	Mô hình đạt được hiệu suất tốt và được lưu lại dưới tên updateMnistCNN.keras.
 
-#### Tóm tắt ưu điểm so với mô hình ban đầu:
+#### 2. Tóm tắt ưu điểm so với mô hình ban đầu:
 
 •	Mô hình kết hợp Data Augmentation, Dropout, và Batch Normalization để cải thiện độ chính xác và giảm overfitting.
 
