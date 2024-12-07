@@ -74,4 +74,16 @@ o	Sau khi huấn luyện, mô hình được đánh giá trên tập kiểm tra 
 •	Độ chính xác: Được in ra sau khi đánh giá trên tập kiểm tra (test_images và test_labels).
 
 ![mô hình ban đầu](mnistmodel1.png)
-![mô hình ban đầu](mnistmodel2.png)
+tuy nhiên với cách sây dụng cơ bản như vậy thi mô hình có khả năng gặp phải một sô tình trạng lỗi ở đây có thể nói tói như hình dưới
+![tình trạng lỗi của mô hình ban đầu](mnistmodel2.png)
+giải thích:
+1.	Accuracy over Epochs (Biểu đồ bên trái):
+o	Độ chính xác trên tập huấn luyện (Training Accuracy) tăng dần và đạt gần 100%, cho thấy mô hình học tốt trên dữ liệu huấn luyện.
+o	Độ chính xác trên tập kiểm tra (Validation Accuracy) ổn định quanh mức 99%, nhưng không tăng thêm nhiều sau một số epoch đầu. Điều này cho thấy mô hình có khả năng tổng quát hóa tốt nhưng có thể đã đạt giới hạn về độ chính xác.
+2.	Loss over Epochs (Biểu đồ bên phải):
+o	Hàm mất mát trên tập huấn luyện (Training Loss) giảm đều và duy trì ở mức thấp, cho thấy mô hình tối ưu tốt trên dữ liệu huấn luyện.
+o	Hàm mất mát trên tập kiểm tra (Validation Loss) giảm ban đầu nhưng tăng dần sau khoảng 10 epoch, biểu hiện của hiện tượng overfitting (mô hình học quá mức dữ liệu huấn luyện).
+Nhận xét:
+•	Mô hình hoạt động tốt với độ chính xác cao, nhưng có dấu hiệu overfitting, vì Validation Loss tăng trong khi Validation Accuracy không cải thiện.
+•	Để cải thiện, có thể thử các phương pháp như giảm số lượng epoch, sử dụng regularization (Dropout, L2 Regularization), hoặc áp dụng kỹ thuật tăng cường dữ liệu (data augmentation) để làm đa dạng tập dữ liệu huấn luyện.
+
