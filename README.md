@@ -124,7 +124,7 @@ tuy nhiên với cách xây dụng cơ bản như vậy thi mô hình có khả 
 **Hình 3:** đánh giá mô hình ban đầu
 ![tình trạng lỗi của mô hình ban đầu](mnistmodel2.png)
 
-### giải thích:
+**giải thích:**
 
 **Accuracy over Epochs (Biểu đồ bên trái):**
 
@@ -197,7 +197,7 @@ o	Mô hình được huấn luyện trong tối đa 40 epoch, với dữ liệu 
 
 o	Mô hình đạt được hiệu suất tốt và được lưu lại dưới tên updateMnistCNN.keras.
 
-#### 2. Tóm tắt ưu điểm so với mô hình ban đầu:
+### 2. Tóm tắt ưu điểm so với mô hình ban đầu:
 
 •	Mô hình kết hợp Data Augmentation, Dropout, và Batch Normalization để cải thiện độ chính xác và giảm overfitting.
 
@@ -208,7 +208,7 @@ o	Mô hình đạt được hiệu suất tốt và được lưu lại dưới 
 **Hình 5:** đánh giắ so sánh 2 mô hình trước sau cải thiện
 ![đánh giắ so sánh 2 mô hình trước sau cải thiện](opmnistmodel2.png)
 
-#### giải thích:
+**giải thích:**
 
 **Mô hình cũ:**
 
