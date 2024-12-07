@@ -1,4 +1,4 @@
-Giới thiệu các công cụ sử dụng
+#Giới thiệu các công cụ sử dụng
 
 Ngôn ngữ lập trình Python: Python là một ngôn ngữ lập trình cấp cao, đa năng và được biết đến với cú pháp đơn giản, dễ đọc, phù hợp cho cả người mới học lẫn các chuyên gia lập trình. Với khả năng hỗ trợ nhiều thư viện mạnh mẽ, Python trở thành lựa chọn hàng đầu trong lĩnh vực trí tuệ nhân tạo, học máy, xử lý dữ liệu, và phát triển ứng dụng.
 
@@ -9,11 +9,12 @@ NumPy: Thư viện tính toán khoa học được sử dụng để thao tác v
 Tkinter: Thư viện đồ họa của Python được sử dụng để tạo giao diện người dùng (GUI) cho ứng dụng . Tkinter cung cấp các widget như canvas, nút và nhãn để người dùng tương tác với chương trình. 
 
 Pillow (PIL Fork): Thư viện xử lý hình ảnh của Python được sử dụng để thao tác với ảnh do người dùng vẽ trên canvas. PIL cung cấp các hàm để tạo, mở, lưu và xử lý ảnh.
+
 DATASET:https://yann.lecun.com/exdb/mnist/
 
 mô hình giúp cho người dùng nhận dạnh hình ảnh chữ số viết tay và thực hiện nhận dạng chính xác chữ số từ 0 đến 9. Kết quả dự đoán cần được hiển thị rõ ràng và dự đoán chữ số một cách tốt để có thể dùng trên giao diện người dùng xây dựng. mô hình cần đảm bảo thời gian xử lý nhanh, đáp ứng nhu cầu sử dụng thực tế(bước đầu là cho phép người dùng làm quen với học sâu của xử lý ảnh).
 
-Lựa chọn bộ dữ liệu 
+#Lựa chọn bộ dữ liệu 
 Bộ dữ liệu được sử dụng trong đề tài là: MNIST 
 Bộ dữ liệu MNIST (Modified National Institute of Standards and Technology) là một tập dữ liệu chuẩn trong lĩnh vực trí tuệ nhân tạo, đặc biệt trong bài toán nhận dạng chữ số viết tay. MNIST bao gồm 70.000 hình ảnh chữ số viết tay từ 0 đến 9, trong đó có 60.000 hình ảnh dùng để huấn luyện và 10.000 hình ảnh để kiểm tra. Mỗi hình ảnh trong bộ dữ liệu có kích thước 28x28 pixel và là ảnh xám (grayscale), giúp giảm độ phức tạp của bài toán và tăng tính đồng nhất của dữ liệu . Đặc biệt, các chữ số trong MNIST được viết bởi nhiều người khác nhau, bao gồm cả trẻ em và người lớn, tạo nên sự đa dạng trong phong cách viết và độ phức tạp, làm cho nó trở thành một bộ dữ liệu lý tưởng để kiểm tra độ mạnh mẽ của các mô hình nhận diện.
 Trong nhận dạng chữ viết tay, MNIST đóng vai trò là bộ dữ liệu khởi điểm để phát triển và kiểm thử các thuật toán xử lý ảnh và học sâu . Bộ dữ liệu này thường được sử dụng để huấn luyện các mô hình Machine Learning hoặc Deep Learning, đặc biệt là mạng nơ-ron tích chập (Convolutional Neural Networks - CNN). Nhờ tính chuẩn hóa cao và dễ sử dụng, MNIST không chỉ giúp các nhà nghiên cứu kiểm chứng hiệu quả của mô hình mà còn hỗ trợ trong việc so sánh hiệu suất giữa các thuật toán . Ngoài ra, MNIST còn được dùng làm tài liệu học tập cho người mới bắt đầu nghiên cứu về trí tuệ nhân tạo, giúp họ hiểu rõ hơn về quy trình xử lý dữ liệu, huấn luyện mô hình và đánh giá kết quả.
@@ -78,6 +79,7 @@ o	Sau khi huấn luyện, mô hình được đánh giá trên tập kiểm tra 
 •	Lưu mô hình: Mô hình sau khi huấn luyện được lưu dưới tên file MnistCNN.keras để sử dụng trong tương lai.
 •	Độ chính xác: Được in ra sau khi đánh giá trên tập kiểm tra (test_images và test_labels).
 
+**Hình 2:** đánh giá mô hình ban đầu
 ![mô hình ban đầu](mnistmodel1.png)
 
 
