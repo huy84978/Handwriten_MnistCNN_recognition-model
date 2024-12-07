@@ -146,8 +146,8 @@ o	Hàm mất mát trên tập kiểm tra (Validation Loss) giảm ban đầu nh�
 
 sau khi cải thiện ta được mô hình thứ 2 đã cải thiện được tình trạng overfitting trên.
 
-**Hình 4:** đánh giắ so sánh 2 mô hình trước sau cải thiện
-![đánh giắ so sánh 2 mô hình trước sau cải thiện](opmnistmodel2.png)
+**Hình 4:** so sánh 2 mô hình trước sau cải thiện
+![so sánh 2 mô hình trước sau cải thiện](sosanh2model.png)
 
 Mô hình “OptimizationMnistCNN” là một phiên bản cải tiến của mạng nơ-ron tích chập (CNN) để nhận diện chữ viết tay từ tập dữ liệu MNIST. So với mô hình cũ mô hình này mạnh mẽ với các kỹ thuật nâng cao nhằm cải thiện hiệu năng và giảm overfitting. Dưới đây là khái quát về mô hình:
 
@@ -201,3 +201,5 @@ Tóm tắt ưu điểm so với mô hình ban đầu:
 
 •	Sử dụng cấu trúc CNN đa tầng, mạnh mẽ và phù hợp cho dữ liệu hình ảnh.
 
+**Hình 5:** đánh giắ so sánh 2 mô hình trước sau cải thiện
+![đánh giắ so sánh 2 mô hình trước sau cải thiện](opmnistmodel2.png)
