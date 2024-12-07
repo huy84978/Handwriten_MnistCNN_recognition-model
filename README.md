@@ -85,11 +85,14 @@ o	Độ chính xác trên tập kiểm tra (Validation Accuracy) ổn định qu
 
 
 2.	Loss over Epochs (Biểu đồ bên phải):
+
 o	Hàm mất mát trên tập huấn luyện (Training Loss) giảm đều và duy trì ở mức thấp, cho thấy mô hình tối ưu tốt trên dữ liệu huấn luyện.
+
 o	Hàm mất mát trên tập kiểm tra (Validation Loss) giảm ban đầu nhưng tăng dần sau khoảng 10 epoch, biểu hiện của hiện tượng overfitting (mô hình học quá mức dữ liệu huấn luyện).
 
 
 Nhận xét:
+
 •	Mô hình hoạt động tốt với độ chính xác cao, nhưng có dấu hiệu overfitting, vì Validation Loss tăng trong khi Validation Accuracy không cải thiện.
 
 sau khi cải thiện ta được mô hình thứ 2 đã cải thiện được tình trạng overfitting trên.
