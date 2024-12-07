@@ -82,9 +82,13 @@ giải thích:
 1.	Accuracy over Epochs (Biểu đồ bên trái):
 o	Độ chính xác trên tập huấn luyện (Training Accuracy) tăng dần và đạt gần 100%, cho thấy mô hình học tốt trên dữ liệu huấn luyện.
 o	Độ chính xác trên tập kiểm tra (Validation Accuracy) ổn định quanh mức 99%, nhưng không tăng thêm nhiều sau một số epoch đầu. Điều này cho thấy mô hình có khả năng tổng quát hóa tốt nhưng có thể đã đạt giới hạn về độ chính xác.
+
+
 2.	Loss over Epochs (Biểu đồ bên phải):
 o	Hàm mất mát trên tập huấn luyện (Training Loss) giảm đều và duy trì ở mức thấp, cho thấy mô hình tối ưu tốt trên dữ liệu huấn luyện.
 o	Hàm mất mát trên tập kiểm tra (Validation Loss) giảm ban đầu nhưng tăng dần sau khoảng 10 epoch, biểu hiện của hiện tượng overfitting (mô hình học quá mức dữ liệu huấn luyện).
+
+
 Nhận xét:
 •	Mô hình hoạt động tốt với độ chính xác cao, nhưng có dấu hiệu overfitting, vì Validation Loss tăng trong khi Validation Accuracy không cải thiện.
 •	Để cải thiện, có thể thử các phương pháp như giảm số lượng epoch, sử dụng regularization (Dropout, L2 Regularization), hoặc áp dụng kỹ thuật tăng cường dữ liệu (data augmentation) để làm đa dạng tập dữ liệu huấn luyện.
