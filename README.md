@@ -146,6 +146,8 @@ o	Hàm mất mát trên tập kiểm tra (Validation Loss) giảm ban đầu nh�
 
 sau khi cải thiện ta được mô hình thứ 2 đã cải thiện được tình trạng overfitting trên.
 
+#  Mô tả khái quát về mô hình “OptimizationMnistCNN” mô hình sau khi cải thiện
+
 **Hình 4:** so sánh 2 mô hình trước sau cải thiện
 ![so sánh 2 mô hình trước sau cải thiện](sosanh2model.png)
 
